@@ -1,15 +1,15 @@
 <template name="bookmarks">
   <div class="page bookmarks">
-    {{> nav title='Your Bookmarks' subtext=recipeCount}}
+    {{> nav title='Your Bookmarks' subtext=plumCount}}
 
     <div class="content-scrollable">
-      <div class="list-recipes">
+      <div class="list-plums">
         {{#each this}}
-          {{> recipeItem recipe=this size='large'}}
+          {{> plumItem plum=this size='large'}}
         {{else}}
           <div class="wrapper-message">
             <div class="title-message">No bookmarks yet</div>
-            <div class="subtitle-message">Tap <span class="icon-bookmark-hollow"></span> to bookmark your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
+            <div class="subtitle-message">Tap <span class="icon-bookmark-hollow"></span> to bookmark your favorite plums. <a href="{{pathFor 'home'}}">Return home</a></div>
 
           </div>
         {{/each}}

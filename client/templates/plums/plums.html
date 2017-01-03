@@ -1,0 +1,20 @@
+<template name="plums">
+  <div class="page plums">
+    {{> nav title='Plumaa Today' black=true}}
+
+    <div class="content-scrollable">
+      <!-- <h2 class="list-title">Latest Plums</h2>
+      <div class="list-subtitle">See what people are sharing</div> -->
+      <div class="list-plums">
+        {{#each plums}}
+          {{#if highlighted}}
+            {{> plumItem size='large'}}
+          {{else}}
+            {{> plumItem size='small'}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+
+  </div>
+</template>

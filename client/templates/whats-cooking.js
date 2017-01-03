@@ -4,5 +4,8 @@ Template.feed.helpers({
   },
   ready: function() {
     return Router.current().feedSubscription.ready();
+  },
+  latestNews: function() {
+    return News.latest();
   }
 })

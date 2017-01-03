@@ -1,10 +1,10 @@
 App.info({
-  name: 'Local Market',
-  description: 'A recipe sharing app made in Meteor.',
-  author: 'Percolate Studio Team',
-  email: 'us@percolatestudio.com',
-  website: 'http://percolatestudio.com',
-  version: '0.0.1'
+  name: 'Plumaa',
+  description: 'Got A Passion? Share it. #WhatsYourPassion',
+  author: 'Plumaa Team',
+  email: 'victor@plumaa.com',
+  website: 'http://plumaa.com',
+  version: '1.0.0'
 });
 
 App.icons({

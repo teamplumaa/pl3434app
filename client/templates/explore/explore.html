@@ -1,0 +1,53 @@
+<template name="explore">
+  <div class="page explore">
+
+    {{>nav title='Explore'}}
+
+    <div class="content-scrollable">
+      <div class="list-plums" align="right">
+        <input type="text" class="form-control" placeholder="Explore Plumaa...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+      <h2 class="list-title">Food</h2>
+      <div class="list-subtitle">The Best Food plums on Plumaa</div>
+      <div class="list-plums">
+        {{#each featuredPlums}}
+          {{> plumItem plum=this size='small'}}
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'plums'}}" class="btn-primary">Check out more Food plums</a>
+      
+      <h2 class="list-title">Sports</h2>
+      <div class="list-subtitle">The Best Sports plums on Plumaa</div>
+      <div class="list-plums">
+        {{#each featuredPlums}}
+          {{> plumItem plum=this size='small'}}
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'plums'}}" class="btn-primary">Check out more Sports plums</a>
+
+      <h2 class="list-title">Haikus</h2>
+      <div class="list-subtitle">The Best Haiku plums on Plumaa</div>
+      <div class="list-plums">
+        {{#each featuredPlums}}
+          {{> plumItem plum=this size='small'}}
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'plums'}}" class="btn-primary">Check out more Haiku plums</a>
+
+      <h2 class="list-title">Music</h2>
+      <div class="list-subtitle">The Best Music plums on Plumaa</div>
+      <div class="list-plums">
+        {{#each featuredPlums}}
+          {{> plumItem plum=this size='small'}}
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'plums'}}" class="btn-primary">Check out more Music plums</a>
+
+      
+    </div>
+
+  </div>
+</template>

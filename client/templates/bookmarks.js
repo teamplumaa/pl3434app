@@ -1,5 +1,5 @@
 Template.bookmarks.helpers({
-  recipeCount: function() {
-    return pluralize(this.length, 'recipe');
+  plumCount: function() {
+    return pluralize(this.length, 'plum');
   }
 });

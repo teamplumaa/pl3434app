@@ -1,0 +1,70 @@
+<template name="contest">
+
+  <div class="page contest {{activeTabClass}}">
+    {{#nav title='Contests' back=true}}
+<!--       {{#if bookmarked}}
+        <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
+      {{else}}
+        <a href="#" class="nav-item js-add-bookmark"><span class="icon-bookmark-hollow"></span></a>
+      {{/if}}
+      <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a> -->
+    {{/nav}}
+
+    <!-- <div class="image-contest" style="background-image: url('{{contestimage contest=this size='full'}}')"> -->
+    <div class="image-contest">
+      <img src="{{contestimage}}" class="background-image" />
+    </div>
+
+
+    <div class="attribution-contest js-uncollapse">
+      <h1 class="title-contest">{{title}}</h1>
+      <div class="metadata-wrapper">
+        <span class="source">{{sponsor}}</span>
+        <span class="time">{{deadline}}</span>
+      </div>
+
+      <div class="btns-group">
+        <a class="btn-secondary-2 {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'contest'}}no-state{{/if}} js-show-contest">Info</a>
+        <a class="btn-secondary-2 {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'contest'}}no-state{{/if}} js-show-feed">Participate</a>
+      </div>
+    </div>
+
+
+    <div class="content-scrollable static-nav make-scrollable">
+      <div class="metadata-wrapper">
+        <span class="source">{{sponsor}}</span>
+        <span class="time">{{deadline}}</span>
+      </div>
+
+      <p>{{description}}</p>
+      <hr>
+
+      <h2 class="list-title">About {{sponsor}}</h2>
+        <span class="text"><p>{{aboutsponsor}}</p></span>
+      <a href="{{sponsorswebsite}}" target="_blank" class="btn-primary btn-block js-open">Learn More</a>
+    </div>
+
+    <div class="content-scrollable static-nav feed-scrollable">
+
+      <div class="list-activities">
+        <div class="container-contest" align="right">
+          <form>
+            <input type="text" class="form-control" placeholder="Enter this contest..." name="myentry" id="myentry">
+            <!-- <p>Please enter the contest id below so we can confirm your identity.</p>
+            <input type="text" class="form-control" placeholder="Enter contest id" name="contestid" id="contestid">
+            <input type="submit" value="Enter Contest"> -->
+          </form>
+        </div>
+        <hr>
+        {{#each contestentries}}
+          {{name}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No entries yet.</div>
+            <div class="subtitle-message">Be the first to participate in this contest.</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

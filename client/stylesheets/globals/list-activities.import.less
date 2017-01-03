@@ -4,7 +4,7 @@
   overflow: auto;
   position: relative;
 
-  .wrapper-message { top: 50%; }
+  .wrapper-message { top: 65%; }
 }
 
 .item-activity {
@@ -26,11 +26,20 @@
     position: relative;
     z-index: 1;
 
+    .avatar-contestfeed {
+      float: right;
+      height: 2.1rem;
+      margin-right: .5rem;
+      width: 2.1rem;
+      border-color: @color-rare;
+    }
+
     .avatar {
       float: left;
-      height: 2rem;
+      height: 2.1rem;
       margin-right: .5rem;
-      width: 2rem;
+      width: 2.1rem;
+      border-color: @color-rare;
     }
 
     .meta {
@@ -39,15 +48,65 @@
       display: block;
     }
 
+    [class^="pe-7s-"],
+    [class*=" pe-7s-"] {
+      line-height: 1.5rem;
+      color: @color-primary;
+      vertical-align: middle;
+      float: right;
+    }
+
     .author { .type-black; }
 
-    .recipe {
+    .author-feed { .type-black; vertical-align: middle;}
+
+    .plum {
       .type-bold;
       color: @color-primary;
     }
 
     .location { color: @color-medium-rare; }
   }
+
+  .plum-feed {
+    .type-bold;
+    color: @color-primary;
+    text-align: center;
+  }
+
+  .metadata-wrapper {
+    .transform(translate3d(0,0,0));
+    padding-top: 1em;
+    max-height: 10em;
+    opacity: 1;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .source,
+  .time {
+    .font-s1;
+    color: @color-medium;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .source {
+    .type-secondary;
+    .title-caps;
+    padding-right: .25rem;
+  }
+
+  .time {
+    .type-bold;
+    border-left: 1px solid @color-medium-rare;
+    padding-left: .25rem;
+    padding-right: .25em;
+  }
+
+
+
+
+
 
   .bg-image {
     display: block;

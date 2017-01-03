@@ -1,0 +1,46 @@
+<template name="plumfeed">
+  <div class="page whats-cooking">
+    {{> nav title='PlumsFeed'}}
+
+    <div class="content-scrollable">
+      <div class="list-activities">
+        <!-- {{#if ready}} -->
+          {{#each plums}}
+      		<a href="{{pathFor 'plum'}}" class="item-activity">
+            <span class="attribution">
+              <span class="avatar">
+                <img src="{{userAvatar}}" class="image-avatar">
+              </span>
+              <span class="meta">
+                <span class="author-feed">{{author}}</span><span class="pe-7s-note2"></span><span class="plum"> shared</span> 
+              </span>
+
+            </span>
+            <span class="plum-feed">{{title}}</span>
+  			    <div class="bg-image">
+              <img src="{plumImage}}" class="background-image" height="100%" width="100%" />
+            </div>
+
+            <div class="metadata-wrapper">
+              <span class="source">{{author}}</span>
+              <span class="time">20 Likes</span>
+              <span class="time">20 Bookmarks</span>
+              <span class="time">1200 words</span>
+            </div>
+			    </a>
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">No new plums!</div>
+              <div class="subtitle-message">Add some friends and lets get your feed populated.</div>
+            </div>
+          {{/each}}
+        <!-- {{else}}
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading Contests</div>
+          </div>
+        {{/if}} -->
+      </div>
+    </div>
+  </div>
+</template>

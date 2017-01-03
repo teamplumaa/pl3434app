@@ -1,0 +1,12 @@
+<template name="newcontest">
+	<div class="page whats-cooking">
+	    {{> nav title='New Contest'}}
+
+	    <div class="content-scrollable">
+			<h2 class="list-title">Add A New Contest</h2>
+			<div class="container-contest">
+				{{>quickForm collection="Contests" id="insertContestForm" type="insert"}}
+			</div>
+		</div>
+	</div>
+</template>

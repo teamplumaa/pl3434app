@@ -1,0 +1,35 @@
+<template name="newplum">
+
+	<div class="page whats-cooking">
+    {{> nav title=''}}
+
+    <div class="content-scrollable">
+		<h2 class="list-title">Share A Plum</h2>
+		<div class="container-contest">
+		{{> quickForm collection="Plums" id="insertPlumsForm" type="insert"}}
+			<!-- {{#autoForm collection="Plums" id="insertPlumForm" type="insert" class="form-control"}}
+			<fieldset>
+				{{> afQuickField name='title'}}
+				{{> afQuickField name='content' rows=6}}
+				{{> afQuickField name='tags'}}
+			</fieldset>
+			<button type="submit" class="btn btn-primary btn-block">Insert</button>
+			{{/autoForm}} -->
+		</div>
+		
+	</div>
+	</div>
+</template>
+
+<template name="plumss">
+	<div class="page whats-cooking">
+    {{> nav title=''}}
+
+    <div class="content-scrollable">
+	{{#each plumss}}
+			<h2>{{title}}</h2>
+			<p>{{content}}</p>
+		{{/each}}
+	</div>
+	</div>
+</template>

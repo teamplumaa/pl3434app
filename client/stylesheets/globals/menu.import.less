@@ -1,16 +1,13 @@
 #menu {
-  .background-image(
-    linear-gradient(top, rgba(85,134,223,.1), rgba(0,0,0,0) 100%),
-    url('img/app/bg-menu-640x1136.jpg')
-  );
+  background-color: @color-primary;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   a {
     box-shadow: rgba(129,206,200,.1) 0 1px 0 0;
-    color: rgba(255,255,255,.4);
+    color: @color-empty;
     display: block;
-    height: 20%;
+    height: 16.5%;
     position: relative;
     text-align: center;
 
@@ -33,6 +30,20 @@
       .font-m1;
       display: block;
       margin-bottom: 5%;
+    }
+
+    [class^="pe-7s-"],
+    [class*=" pe-7s-"] {
+      line-height: 3rem;
+      vertical-align: middle;
+    }
+
+    .avatar {
+      float: right;
+      height: 2.1rem;
+      margin-right: .5rem;
+      width: 2.1rem;
+      border-color: @color-rare;
     }
 
     .title-menu {

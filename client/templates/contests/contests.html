@@ -1,0 +1,44 @@
+<template name="contests">
+  <div class="page whats-cooking">
+    {{> nav title='Contests'}}
+
+    <div class="content-scrollable">
+      <div class="list-activities">
+        <!-- {{#if ready}} -->
+          {{#each contests}}
+      		<a href="{{pathFor 'contest'}}" class="item-activity">
+  			    <span class="attribution">
+  			      <span class="author plum" align="center">{{title}}</span>
+  			    </span>
+
+  			    <div class="bg-image">
+              <img src="{{contestimage}}" class="background-image" height="100%" width="100%" />
+            </div>
+
+  			    <span class="attribution">
+              <br>
+  			      <span class="avatar-contestfeed">
+  			        <img src="{{sponsorlogo}}" class="image-avatar">
+  			      </span>
+  			      <span class="meta">
+  			        This contest is sponsored by:<br/>
+                <span class="author">{{sponsor}}</span>
+  			       </span>
+  			    </span>
+			    </a>
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">No new contests!</div>
+              <div class="subtitle-message">Check back again soon for great prizes and contests.</div>
+            </div>
+          {{/each}}
+        <!-- {{else}}
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading Contests</div>
+          </div>
+        {{/if}} -->
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<template name="plumItem">
+  <a class="item-plum {{highlightedClass}}" href="{{path}}">
+    {{#with plum}}
+      <span class="attribution">
+        <span class="title-plum">{{title}}</span>
+        <span class="metadata-plum">
+          <span class="author-plum">{{author}}</span>
+          <span class="bookmarks-plum"><span class="icon-bookmark"></span> {{bookmarkCount}}</span>
+        </span>
+      </span>
+    {{/with}}
+
+    <img src="{{plumImage plum=plum size=size}}" />
+  </a>
+</template>

@@ -1,0 +1,55 @@
+<template name="plum">
+
+  <div class="page plum {{activeTabClass}}">
+    {{#nav title='' black=true back=true}}
+      {{#if bookmarked}}
+        <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
+      {{else}}
+        <a href="#" class="nav-item js-add-bookmark"><span class="icon-bookmark-hollow"></span></a>
+      {{/if}}
+      <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+    {{/nav}}
+
+    <div class="image-plum" style="background-image: url('{{plumImage plum=this size='full'}}')"></div>
+
+    <div class="attribution-plum js-uncollapse">
+      <h1 class="title-plum">{{title}}</h1>
+      <div class="metadata-wrapper">
+        <p class="description-plum">{{tags}}</p>
+        <span class="source">{{author}}</span>
+        <span class="time">{{updated}}</span>
+      </div>
+
+      <div class="btns-group">
+        <a class="btn-secondary-2 {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'plum'}}no-state{{/if}} js-show-plum">Read</a>
+        <a class="btn-secondary-2 {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'plum'}}no-state{{/if}} js-show-feed">Comment</a>
+      </div>
+    </div>
+
+
+    <div class="content-scrollable static-nav make-scrollable">
+      <div class="metadata-wrapper">
+        <span class="source">{{author}}</span>
+        <span class="time">{{updated}}</span>
+      </div>
+      <p>{{content}}</p>
+      <div class="btns-group">
+        <a class="btn-secondary-2">Read</a>
+        <a class="btn-secondary-2">Comment</a>
+      </div>
+    </div>
+
+    <div class="content-scrollable static-nav feed-scrollable">
+      <div class="list-activities">
+        <!-- {{#each comments}}
+          {{> comment}}
+        {{else}} -->
+          <div class="wrapper-message">
+            <div class="title-message">No Comments yet!</div>
+            <div class="subtitle-message">Be the first to share your thoughts on this plum. <a class="js-share">Share now</a></div>
+          </div>
+        <!-- {{/each}} -->
+      </div>
+    </div>
+  </div>
+</template>

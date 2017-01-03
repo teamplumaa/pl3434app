@@ -23,11 +23,11 @@ var DIMENSIONS = {
   full: '640x800'
 };
 
-UI.registerHelper('recipeImage', function(options) {
+UI.registerHelper('plumImage', function(options) {
   var size = options.hash.size || 'large';
 
-  if (options.hash.recipe)
-    return '/img/recipes/' + DIMENSIONS[size] + '/' + options.hash.recipe.name + '.jpg';
+  if (options.hash.plum)
+    return '/img/plums/' + DIMENSIONS[size] + '/' + options.hash.plum.name + '.jpg';
 });
 
 Handlebars.registerHelper('activePage', function() {
